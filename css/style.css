@@ -55,6 +55,27 @@ header nav a:hover {color:#FFD700;}
     color: #fff;
     cursor: pointer;
 }
+/* Botões de navegação do lightbox */
+.lightbox .prev,
+.lightbox .next 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: #FFD700;
+}
+
 footer {background:#002147; color:#fff; text-align:center; padding:20px; font-size:0.9rem;}
 footer a {color:#FFD700; text-decoration:none;}
 .whatsapp-float {position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; font-size:2rem; padding:10px 15px; border-radius:50%; text-decoration:none; box-shadow:0 2px 5px rgba(0,0,0,0.3);}
