@@ -3,12 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freitas Videokê - Locação de Karaokê</title>
-  <meta name="description" content="Locação de videokê para festas e eventos em São Paulo. Aparelhagem profissional com som e imagem de alta qualidade.">
+  <title>Freitas Videokê - Locação de Equipamentos</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <section id="galeria" class="gallery">
+<header>
+  <div class="logo">Freitas Videokê</div>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a href="https://wa.me/5511999999999" class="btn-header">Solicitar Orçamento</a>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Locação de Equipamentos de Videokê</h1>
+    <p>Estrutura completa para festas e eventos inesquecíveis.</p>
+    <a href="https://wa.me/5511999999999" class="btn-hero">Entre em Contato</a>
+  </div>
+</section>
+
+<section id="servicos" class="services">
+  <h2>Nossos Serviços</h2>
+  <ul>
+    <li>Locação de videokê completo</li>
+    <li>Telões e TVs de alta definição</li>
+    <li>Caixas de som profissionais</li>
+    <li>Equipamentos modernos e confiáveis</li>
+  </ul>
+</section>
+
+<section id="galeria" class="gallery">
   <h2>Galeria</h2>
   <div class="gallery-grid">
     <img src="img/evento_1.jpeg" alt="Evento 1">
@@ -24,48 +52,29 @@
   <img class="lightbox-content" id="lightbox-img">
 </div>
 
-<header>
-  <div class="logo">Freitas Videokê</div>
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#contato">Contato</a>
-  </nav>
-  <a href="https://wa.me/5511991801579" class="btn-header">Solicitar Orçamento</a>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Karaokê para seu Evento</h1>
-    <p>Locação de videokê com som e imagem profissionais para festas inesquecíveis.</p>
-    <a href="https://wa.me/5511991801579" class="btn-hero">Faça um Orçamento</a>
-  </div>
-</section>
-
-<section id="servicos" class="services">
-  <h2>Nossos Serviços</h2>
-  <div class="service-grid">
-    <div class="card">🎤 Locação de Videokê Completo</div>
-    <div class="card">📺 Telões e TVs de Alta Definição</div>
-    <div class="card">🔊 Caixas de Som Profissionais</div>
-  </div>
-</section>
-
-<section id="galeria" class="gallery">
-  <h2>Galeria</h2>
-  <div class="gallery-grid">
-    <img src="img/evento_1.jpeg" alt="Evento 1">
-    <img src="img/evento_2.jpeg" alt="Evento 2">
-    <img src="img/evento_7.jpeg" alt="Evento 3">
-    <img src="img/evento_4.jpeg" alt="Evento 4">
-  </div>
-</section>
-
 <footer id="contato">
-  <p>📞 Telefone: (11) 2221-8279 | 📱 WhatsApp: <a href="https://wa.me/5511991801579">(11) 99180-1579</a></p>
+  <p>📞 Telefone: (11) 2221-8279 | 📱 WhatsApp: <a href="https://wa.me/5511999999999">(11) 9 9180-1579</a></p>
   <p>📍 Av Santos Dumont, 1350 - Santana - São Paulo - SP</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/5511991801579">💬</a>
+<a class="whatsapp-float" href="https://wa.me/5511999999999">💬</a>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => lightbox.style.display = "none");
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+</script>
 </body>
 </html>
