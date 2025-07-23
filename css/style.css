@@ -8,7 +8,7 @@ header nav a:hover {color:#FFD700;}
 .btn-header {background:#FFD700; color:#002147; padding:8px 15px; text-decoration:none; border-radius:5px; font-weight:bold;}
 .hero {
     position: relative;
-    background: url('../img/hero.jpg') center center/cover no-repeat;
+    background: url('../img/hero.png') center center/cover no-repeat;
     height: 100vh; /* ocupa a tela toda */
     display: flex;
     align-items: center;
