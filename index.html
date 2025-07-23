@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Freitas Videoke - Locação de Karaokê para festas e eventos em SP">
+  <title>Freitas Videoke</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="img/logo_freitas.png" alt="Freitas Videokê" class="logo-img">
+      <div class="logo-text">Freitas Videokê</div>
+    </div>
+    <nav id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Karaokê Premium para seu Evento</h1>
+      <p>Transforme sua festa com a melhor experiência de videokê em São Paulo.</p>
+      <a href="https://wa.me/5511918071579" class="btn-whatsapp">Fale no WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section fade-in">
+    <h2>Sobre Nós</h2>
+    <p>Desde 1995, a Freitas Videoke oferece locação de karaokê premium com equipamentos da Raf Eletrônica, microfones sem fio, TVs de alta definição e som profissional. Ideal para festas, confraternizações e eventos corporativos.</p>
+  </section>
+
+  <section id="servicos" class="section fade-in">
+    <h2>Serviços</h2>
+    <div class="grid">
+      <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Microfone"> Locação completa de karaokê com músicas atualizadas</div>
+      <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3313/3313454.png" alt="Telão"> Telões e TVs de 32" a 50"</div>
+      <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/1047/1047455.png" alt="Som"> Caixas de som profissionais</div>
+      <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png" alt="Mesa"> Equipamento Raf Eletrônica</div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section fade-in">
+    <h2>Galeria</h2>
+    <div class="grid-gallery">
+      <img src="img/galeria1.png" alt="Evento 1">
+      <img src="img/galeria2.png" alt="Evento 2">
+      <img src="img/galeria3.png" alt="Evento 3">
+      <img src="img/galeria4.png" alt="Evento 4">
+    </div>
+  </section>
+
+  <section id="contato" class="section fade-in">
+    <h2>Contato</h2>
+    <form action="https://formsubmit.co/contato@freitasvideoke.net.br" method="POST" class="form-contato">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="text" name="telefone" placeholder="Seu telefone">
+      <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+      <input type="hidden" name="_next" value="https://www.freitasvideoke.net.br/sucesso.html">
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <a class="btn-contato-whatsapp" href="https://wa.me/5511918071579" target="_blank">
+    Entrar em contato via WhatsApp
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Freitas Videoke. Todos os direitos reservados.</p>
+    <div class="social-icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="YouTube"></a>
+    </div>
+  </footer>
+
+  <div class="rodape-fixo">
+    <p>📞 Telefone fixo: (11) 2221-8279</p>
+    <p>📱 Telefone Celular (WhatsApp): <a href="https://wa.me/5511918071579" target="_blank">(11) 9 9180-1579</a></p>
+    <p>📍 Endereço: Av Santos Dumont, 1350 - Santana - São Paulo - SP</p>
+  </div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {{ menu.classList.toggle('active'); }});
+
+  // Animações de rolagem
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {{
+    entries.forEach(entry => {{
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    }});
+  }});
+  elements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
