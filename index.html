@@ -5,59 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Freitas Videoke - Locação de Karaokê para festas e eventos em SP">
   <title>Freitas Videoke</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Freitas Videoke</h1>
-    <nav>
+    <div class="logo">Freitas Videoke</div>
+    <nav id="menu">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#galeria">Galeria</a>
       <a href="#contato">Contato</a>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
-  <div class="hero">
-    <h2>Karaokê Profissional para Seu Evento</h2>
-  </div>
-
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Oferecemos a melhor estrutura de videokê para festas e eventos em São Paulo, com aparelhagem profissional, microfones sem fio, TVs LED e repertório atualizado. Atendemos festas residenciais, eventos corporativos e muito mais.</p>
-  </section>
-
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <div class="grid">
-      <div class="card">🎤 Locação de videokê completo com músicas atualizadas</div>
-      <div class="card">📺 Telões e TVs de 32" a 50" inclusos</div>
-      <div class="card">🔊 Caixas de som profissionais</div>
-      <div class="card">🎚️ Equipamento da Raf Eletrônica</div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Karaokê Premium para seu Evento</h1>
+      <p>Estrutura completa com equipamentos profissionais e repertório atualizado.</p>
+      <a href="https://wa.me/5511999999999" class="btn-whatsapp">Fale no WhatsApp</a>
     </div>
   </section>
 
-  <section id="galeria">
-    <h2>Galeria de Eventos</h2>
+  <section id="sobre" class="section">
+    <h2>Sobre Nós</h2>
+    <p>Com anos de experiência em eventos, a Freitas Videoke oferece locação de karaokê premium com equipamentos da Raf Eletrônica, microfones sem fio, TVs de alta definição e som profissional. Ideal para festas, confraternizações e eventos corporativos.</p>
+  </section>
+
+  <section id="servicos" class="section">
+    <h2>Serviços</h2>
     <div class="grid">
+      <div class="card">🎤 Locação completa de karaokê com músicas atualizadas</div>
+      <div class="card">📺 Telões e TVs de 32" a 50"</div>
+      <div class="card">🔊 Caixas de som profissionais</div>
+      <div class="card">🎚️ Equipamento Raf Eletrônica</div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <h2>Galeria</h2>
+    <div class="grid-gallery">
       <img src="https://via.placeholder.com/300x200" alt="Evento 1">
       <img src="https://via.placeholder.com/300x200" alt="Evento 2">
       <img src="https://via.placeholder.com/300x200" alt="Evento 3">
+      <img src="https://via.placeholder.com/300x200" alt="Evento 4">
     </div>
   </section>
 
-  <section id="contato">
+  <section id="contato" class="section">
     <h2>Contato</h2>
-    <p>📞 Telefone: (11) 2221-8279<br>
-       📧 E-mail: contato@freitasvideoke.com.br<br>
-       📱 WhatsApp: (11) 99180-1579</p>
+    <p>📞 (11) 99999-9999<br>📧 contato@freitasvideoke.com.br<br>📱 WhatsApp: (11) 99999-9999</p>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/5511991801579" target="_blank">📱</a>
+  <a class="whatsapp" href="https://wa.me/5511999999999" target="_blank">📱</a>
 
   <footer>
     <p>&copy; 2025 Freitas Videoke. Todos os direitos reservados.</p>
   </footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
