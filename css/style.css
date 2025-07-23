@@ -1,25 +1,92 @@
-
 * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
 body {color:#333; line-height:1.6;}
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => lightbox.style.display = "none");
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+</script>
+
+
+/* HEADER */
 header {display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#002147; color:#fff; position:fixed; top:0; width:100%; z-index:1000;}
 header .logo {font-size:1.5rem; font-weight:bold; color:#FFD700;}
 header nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:500;}
 header nav a:hover {color:#FFD700;}
 .btn-header {background:#FFD700; color:#002147; padding:8px 15px; text-decoration:none; border-radius:5px; font-weight:bold;}
+
+/* HERO */
 .hero {position:relative; background:url('../img/hero.png') center/cover no-repeat; height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:20px; margin-top:80px;}
 .hero .overlay {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
 .hero-content {position:relative; z-index:2; max-width:800px;}
 .hero h1 {font-size:2.5rem; margin-bottom:15px;}
 .hero p {font-size:1.2rem; margin-bottom:20px;}
 .btn-hero {background:#FFD700; color:#002147; padding:10px 20px; text-decoration:none; font-weight:bold; border-radius:5px;}
+
+/* SERVICES */
 .services {padding:80px 20px; background:#f9f9f9; text-align:center;}
 .services h2 {font-size:2rem; color:#002147; margin-bottom:30px;}
 .service-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
 .card {background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); font-size:1.1rem;}
+
+/* GALLERY */
 .gallery {padding:80px 20px; text-align:center;}
 .gallery h2 {font-size:2rem; color:#002147; margin-bottom:30px;}
 .gallery-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px;}
-.gallery-grid img {width:100%; border-radius:8px;}
+.gallery-grid img {
+    width:100%;
+    border-radius:8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor:pointer;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05); /* zoom suave */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* sombra moderna */
+}
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
 footer {background:#002147; color:#fff; text-align:center; padding:20px; font-size:0.9rem;}
 footer a {color:#FFD700; text-decoration:none;}
+
+/* WHATSAPP BUTTON */
 .whatsapp-float {position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; font-size:2rem; padding:10px 15px; border-radius:50%; text-decoration:none; box-shadow:0 2px 5px rgba(0,0,0,0.3);}
