@@ -63,20 +63,51 @@
 <a class="whatsapp-float" href="https://wa.me/5511999999999">💬</a>
 
 <script>
+  const images = document.querySelectorAll(".gallery-grid img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".lightbox .close");
+  const prevBtn = document.querySelector(".lightbox .prev");
+  const nextBtn = document.querySelector(".lightbox .next");
 
-  document.querySelectorAll(".gallery-grid img").forEach(img => {
+  let currentIndex = 0;
+
+  // Abrir lightbox
+  images.forEach((img, index) => {
     img.addEventListener("click", () => {
+      currentIndex = index;
+      showImage();
       lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
     });
   });
 
+  // Mostrar imagem atual
+  function showImage() {
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  // Fechar
   closeBtn.addEventListener("click", () => lightbox.style.display = "none");
   lightbox.addEventListener("click", e => {
     if (e.target === lightbox) lightbox.style.display = "none";
+  });
+
+  // Navegação
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage();
+  });
+
+  // Fechar com ESC e navegar com setas
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") lightbox.style.display = "none";
+    if (e.key === "ArrowRight") { currentIndex = (currentIndex + 1) % images.length; showImage(); }
+    if (e.key === "ArrowLeft") { currentIndex = (currentIndex - 1 + images.length) % images.length; showImage(); }
   });
 </script>
 </body>
