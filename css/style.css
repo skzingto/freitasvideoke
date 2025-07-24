@@ -97,6 +97,15 @@ header nav a:hover {color:#FFD700;}
     font-size:1rem;
     color:#555;
 }
+.card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+.card ul li {
+    margin-bottom: 8px;
+}
 
 
 .gallery {padding:80px 20px; text-align:center;}
