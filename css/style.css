@@ -216,14 +216,17 @@ footer a {
 
 .whatsapp-fixed {
     position: fixed;
-    bottom: 25px; /* altura acima do rodapé */
-    right: 25px;  /* canto direito */
+    bottom: 20px; /* mais próximo do rodapé */
+    right: 20px;  /* canto direito */
     background: #25D366;
     color: #fff;
-    font-size: 2.5rem;
-    padding: 12px 16px;
-    border-radius: 50%;
-    text-align: center;
+    font-size: 2rem;
+    width: 60px;         /* largura fixa */
+    height: 60px;        /* altura fixa */
+    border-radius: 50%;  /* deixa perfeito círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     z-index: 1100;
@@ -232,6 +235,7 @@ footer a {
 .whatsapp-fixed:hover {
     background: #1ebe5d;
 }
+
 
 
 body {
