@@ -5,6 +5,17 @@ header {display:flex; justify-content:space-between; align-items:center; padding
 header .logo {font-size:1.5rem; font-weight:bold; color:#FFD700;}
 header nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:500;}
 header nav a:hover {color:#FFD700;}
+.logo-img {
+  max-width: 150px; /* tamanho no desktop */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    max-width: 120px; /* tamanho reduzido no celular */
+  }
+}
+
 .btn-header {background:#FFD700; color:#002147; padding:8px 15px; text-decoration:none; border-radius:5px; font-weight:bold;}
 .hero {
     position: relative;
