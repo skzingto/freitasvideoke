@@ -6,8 +6,16 @@ header .logo {font-size:1.5rem; font-weight:bold; color:#FFD700;}
 header nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:500;}
 header nav a:hover {color:#FFD700;}
 .logo-img {
-  max-width: 110px;
-  height: auto;
+    max-width: 110px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+
 }
 nav a {
     line-height: 60px; /* centraliza links com o logo */
