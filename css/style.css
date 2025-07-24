@@ -1,13 +1,16 @@
 
 * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
 body {color:#333; line-height:1.6;}
-header {display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#002147; color:#fff; position:fixed; top:0; width:100%; z-index:1000;}
+header {display:flex; justify-content:space-between; align-items:center; padding:5px 20px; background:#002147; color:#fff; position:fixed; top:0; width:100%; z-index:1000;}
 header .logo {font-size:1.5rem; font-weight:bold; color:#FFD700;}
 header nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:500;}
 header nav a:hover {color:#FFD700;}
 .logo-img {
-  max-width: 150px; /* tamanho no desktop */
+  max-width: 110px;
   height: auto;
+}
+nav a {
+    line-height: 60px; /* centraliza links com o logo */
 }
 
 @media (max-width: 768px) {
