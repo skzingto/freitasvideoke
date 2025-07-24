@@ -198,8 +198,22 @@ header nav a:hover {color:#FFD700;}
 }
 
 
-footer {background:#002147; color:#fff; text-align:center; padding:20px; font-size:0.9rem;}
-footer a {color:#FFD700; text-decoration:none;}
+footer {
+    background: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -215,4 +229,7 @@ footer a {color:#FFD700; text-decoration:none;}
 }
 .whatsapp-float:hover {
     background: #1ebe5d;
+}
+body {
+    padding-bottom: 80px; /* altura suficiente para não sobrepor o rodapé */
 }
