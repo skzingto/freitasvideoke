@@ -1,3 +1,10 @@
+# Robots.txt - Freitas Videokê
+# Permite o acesso a todo conteúdo público e bloqueia áreas administrativas
+
 User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
 Allow: /
-Sitemap: https://www.freitasvideoke.net.br/sitemap.xml
+
+# Sitemap para facilitar rastreamento
+Sitemap: https://www.freitasvideoke.net.br/sitemap_otimizado.xml
