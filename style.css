@@ -348,10 +348,10 @@ footer a {
     background: #1ebe5d;
 
 
-
 body {
-    padding-bottom: 80px; /* altura suficiente para não sobrepor o rodapé */
+    padding-bottom: 180px; /* aumenta espaço para não sobrepor o rodapé */
 }
+
 
 /* =======================
    SEÇÃO DIFERENCIAIS
