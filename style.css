@@ -401,3 +401,6 @@ body {
     font-size: 1.5rem;
     margin-right: 10px;
 }
+    body {
+    padding-bottom: 180px; /* aumenta espaço para não sobrepor o rodapé */
+}
