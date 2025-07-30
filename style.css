@@ -1,0 +1,403 @@
+
+* {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+body {color:#333; line-height:1.6;}
+header {display:flex; justify-content:space-between; align-items:center; padding:5px 20px; background:#002147; color:#fff; position:fixed; top:0; width:100%; z-index:1000;}
+header .logo {font-size:1.5rem; font-weight:bold; color:#FFD700;}
+header nav a {color:#fff; margin:0 15px; text-decoration:none; font-weight:500;}
+header nav a:hover {color:#FFD700;}
+.logo-img {
+    max-width: 110px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+
+}
+nav a {
+    line-height: 60px; /* centraliza links com o logo */
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    max-width: 120px; /* tamanho reduzido no celular */
+  }
+}
+
+.btn-header {background:#FFD700; color:#002147; padding:8px 15px; text-decoration:none; border-radius:5px; font-weight:bold;}
+.hero {
+    position: relative;
+    background: url('../img/hero.png') center center/cover no-repeat;
+    height: 100vh; /* ocupa a tela toda */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* gradiente para contraste */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+.btn-hero {
+    background: #FFD700;
+    color: #002147;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+.btn-hero:hover {
+    background: #e6c200;
+}
+
+.services {padding:80px 20px; background:#f9f9f9; text-align:center;}
+.services h2 {font-size:2.5rem; color:#002147; margin-bottom:40px; font-weight:bold;}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background:#fff;
+    padding:30px 20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.card .icon {
+    font-size:3rem;
+    color:#FFD700;
+    margin-bottom:15px;
+    display:block;
+}
+.card h3 {
+    font-size:1.4rem;
+    margin-bottom:10px;
+    color:#002147;
+}
+.card p {
+    font-size:1rem;
+    color:#555;
+}
+.card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+.card ul li {
+    margin-bottom: 8px;
+}
+
+
+.gallery {padding:80px 20px; text-align:center;}
+.gallery h2 {font-size:2rem; color:#002147; margin-bottom:30px;}
+.gallery-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px;}
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* mantém proporção e recorta com foco central */
+    object-position: center; /* garante que o corte seja centralizado */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+/* Botões de navegação do lightbox */
+.lightbox .prev,
+.lightbox .next 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    color: #FFD700;
+}
+/* CLIENTES */
+.clients {
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+.clients h2 {
+    font-size: 2.5rem;
+    color: #002147;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.clients-grid img {
+    max-width: 100px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.clients-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+footer {
+    background: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px; /* mais próximo do rodapé */
+    right: 20px;  /* canto direito */
+    background: #25D366;
+    color: #fff;
+    font-size: 2rem;
+    width: 60px;         /* largura fixa */
+    height: 60px;        /* altura fixa */
+    border-radius: 50%;  /* deixa perfeito círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1100;
+    transition: background 0.3s ease;
+}
+.whatsapp-fixed:hover {
+    background: #1ebe5d;
+}
+.contact-section {
+    padding: 80px 20px 140px; /* aumentei o padding inferior */
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #002147;
+    margin-bottom: 15px;
+}
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #555;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.contact-form textarea {
+    resize: none;
+    min-height: 120px;
+}
+.contact-form button {
+    background: #FFD700;
+    color: #002147;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.contact-form button:hover {
+    background: #e6c200;
+}
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.form-buttons button,
+.form-buttons .btn-whatsapp {
+    flex: 1;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.form-buttons button {
+    background: #FFD700;
+    color: #002147;
+    border: none;
+}
+.form-buttons button:hover {
+    background: #e6c200;
+}
+.form-buttons .btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+.form-buttons .btn-whatsapp:hover {
+    background: #1ebe5d;
+
+
+
+body {
+    padding-bottom: 80px; /* altura suficiente para não sobrepor o rodapé */
+}
+
+/* =======================
+   SEÇÃO DIFERENCIAIS
+======================= */
+#diferenciais {
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+#diferenciais h2 {
+    font-size: 2.5rem;
+    color: #002147;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#diferenciais ul {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+#diferenciais ul li {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#diferenciais ul li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#diferenciais ul li::before {
+    content: "★";
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
