@@ -385,18 +385,20 @@ footer a:hover, #contato a:hover {
 }
 /* Ajustes do formulÃ¡rio centralizado Freitas VideokÃª */
 .contact-section {
-  background: #002147;
-  padding: 56px 0 40px 0;
+  background: transparent;
+  padding: 48px 0 40px 0;
 }
 
 .contact-container {
   max-width: 470px;
-  margin: 0 auto;
-  background: transparent;
-  padding: 0 16px;
+  margin: 48px auto 36px auto;
+  background: #002147; /* fundo azul só no formulário */
+  padding: 32px 18px 28px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.10);
 }
 
 .contact-container h2 {
