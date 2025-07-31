@@ -394,12 +394,13 @@ body {
 
 .contact-section {
   background: transparent !important;
-  padding: 80px 0 56px 0;
+  padding: 56px 0 56px 0;
 }
 
 .contact-container {
   max-width: 540px;
-  margin: 0 auto;
+    margin-top: 40px;
+      margin: 0 auto;
   background: #002147;      /* cinza bem clarinho */
   padding: 38px 22px 32px 22px;
   display: flex;
