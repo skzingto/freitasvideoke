@@ -388,22 +388,27 @@ body {
   background: #fff;
 }
 
+body {
+  background: #fff;
+}
+
 .contact-section {
-  background: transparent; /* sem cor de fundo */
-  padding: 64px 0;
+  background: transparent;
+  padding: 56px 0 56px 0;
 }
 
 .contact-container {
-  max-width: 470px;
+  max-width: 540px;
   margin: 0 auto;
-  background: #002147; /* azul escuro só aqui */
-  padding: 32px 20px 28px 20px;
+  background: #002147;      /* cinza bem clarinho */
+  padding: 38px 22px 32px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 18px;
-  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.10);
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.08);
 }
+
 
 
 .contact-container h2 {
