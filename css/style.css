@@ -383,28 +383,60 @@ footer a:hover, #contato a:hover {
   margin: 0 0 22px 0;
   max-width: 480px;
 }
+/* Ajustes do formulÃ¡rio centralizado Freitas VideokÃª */
+.contact-section {
+  background: #002147;
+  padding: 56px 0 40px 0;
+}
+
+.contact-container {
+  max-width: 470px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.form-instruction {
+  color: #fff;
+  background: transparent;
+  font-size: 1.13rem;
+  text-align: center;
+  margin: 0 0 20px 0;
+  max-width: 420px;
+}
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 13px;
   border: none;
   border-radius: 8px;
   font-size: 1.05rem;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   width: 100%;
   box-sizing: border-box;
   outline: none;
 }
 
 .contact-form textarea {
-  min-height: 100px;
+  min-height: 95px;
   resize: vertical;
 }
 
 .form-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 13px;
+  justify-content: center;
 }
 
 .form-buttons button[type="submit"] {
@@ -413,8 +445,8 @@ footer a:hover, #contato a:hover {
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  font-size: 1.1rem;
-  padding: 16px 22px;
+  font-size: 1.07rem;
+  padding: 14px 18px;
   cursor: pointer;
   transition: background 0.18s, transform 0.18s;
 }
@@ -427,10 +459,10 @@ footer a:hover, #contato a:hover {
   background: #25D366;
   color: #fff !important;
   font-weight: bold;
-  padding: 16px 22px;
+  padding: 14px 18px;
   border: none;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1.07rem;
   cursor: pointer;
   text-align: center;
   display: inline-block;
@@ -442,6 +474,12 @@ footer a:hover, #contato a:hover {
   background: #1ebe5d;
   transform: scale(1.05);
   color: #fff !important;
+}
+
+@media (max-width: 700px) {
+  .contact-container { max-width: 99vw; padding: 0 7px; }
+  .form-buttons { flex-direction: column; gap: 8px; }
+  .form-buttons button, .form-buttons .btn-whatsapp { width: 100%; }
 }
 
 #faq {
