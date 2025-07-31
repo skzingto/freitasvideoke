@@ -389,18 +389,18 @@ body {
 }
 
 body {
-  background: #fff;
+  background: #fff !important;
 }
 
 .contact-section {
-  background: transparent;
+  background: transparent !important;
   padding: 56px 0 56px 0;
 }
 
 .contact-container {
   max-width: 540px;
   margin: 0 auto;
-  background: #f9f9f9;      /* cinza bem clarinho */
+  background: #002147;      /* cinza bem clarinho */
   padding: 38px 22px 32px 22px;
   display: flex;
   flex-direction: column;
