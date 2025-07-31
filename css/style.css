@@ -273,9 +273,19 @@ footer a:hover, #contato a:hover {
   transition: background 0.2s, color 0.2s;
   display: inline-block;
 }
+
+.whatsapp-fixed i {
+  color: #25D366 !important;
+}
+
 .whatsapp-fixed:hover {
   background: #25D366;
   color: #fff !important;
+}
+.whatsapp-fixed:hover i {
+  color: #fff !important;
+}
+
 }
 /* Responsividade para footer */
 @media (max-width: 600px) {
