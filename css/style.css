@@ -389,14 +389,14 @@ body {
 }
 
 .contact-section {
-  background: transparent; /* sem fundo azul aqui */
+  background: transparent; /* sem cor de fundo */
   padding: 64px 0;
 }
 
 .contact-container {
   max-width: 470px;
   margin: 0 auto;
-  background: #002147; /* fundo azul só no card/formulário */
+  background: #002147; /* azul escuro só aqui */
   padding: 32px 20px 28px 20px;
   display: flex;
   flex-direction: column;
