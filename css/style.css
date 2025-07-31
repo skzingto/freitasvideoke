@@ -29,33 +29,45 @@ nav a {
   align-items: center;
   margin-left: 24px; /* ajuste se precisar */
 }
+
 .header-social a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
-  border-radius: 8px;
-  background: #fff;
-  transition: box-shadow 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border-radius: 50%; /* círculo, opcional */
+  background: transparent;
+  transition: transform 0.2s;
+  box-shadow: none;
+  text-decoration: none; /* remove o sublinhado */
 }
+
+.header-social a:visited,
+.header-social a:active {
+  text-decoration: none;
+}
+
 .header-social a:hover {
-  transform: scale(1.07);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transform: scale(1.13);
+  background: rgba(255,255,255,0.09); /* leve efeito hover, pode tirar se não quiser */
 }
+
 .header-social .fa-instagram {
   font-size: 2rem;
   color: #E1306C;
 }
+
 .header-social .fa-facebook {
   font-size: 2rem;
   color: #1877F3;
 }
+
 .header-social .fa-whatsapp {
   font-size: 2rem;
   color: #25D366;
 }
+
 .hero {
     position: relative;
     background: url('../img/hero.png') center center/cover no-repeat;
