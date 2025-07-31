@@ -67,6 +67,36 @@ nav a {
   font-size: 2rem;
   color: #25D366;
 }
+.header-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s cubic-bezier(.19,1,.22,1), filter 0.18s, box-shadow 0.2s;
+  background: transparent;
+  text-decoration: none;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Instagram */
+.header-social a:hover .fa-instagram {
+  transform: scale(1.22) rotate(-8deg);
+  filter: brightness(1.4) drop-shadow(0 0 10px #E1306C55);
+  box-shadow: 0 0 8px #E1306C88;
+}
+/* Facebook */
+.header-social a:hover .fa-facebook {
+  transform: scale(1.22) rotate(8deg);
+  filter: brightness(1.3) drop-shadow(0 0 10px #1877F355);
+  box-shadow: 0 0 8px #1877F388;
+}
+/* WhatsApp */
+.header-social a:hover .fa-whatsapp {
+  transform: scale(1.22) rotate(-7deg);
+  filter: brightness(1.3) drop-shadow(0 0 10px #25D36655);
+  box-shadow: 0 0 8px #25D36688;
+}
+
 
 .hero {
     position: relative;
