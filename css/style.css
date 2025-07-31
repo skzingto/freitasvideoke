@@ -395,6 +395,7 @@ body {
 .contact-section {
   background: transparent !important;
   padding: 56px 0 56px 0;
+    margin-top: 64px;
 }
 
 .contact-container {
