@@ -25,28 +25,31 @@ if (backToTop) {
     });
 }
 
-// MENU HAMBURGUER (sem <script> tags)
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('header nav');
-let menuBackdrop = document.createElement('div');
-menuBackdrop.className = 'menu-backdrop';
-document.body.appendChild(menuBackdrop);
+document.addEventListener('DOMContentLoaded', function() {
+    // MENU HAMBURGUER
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+    let menuBackdrop = document.createElement('div');
+    menuBackdrop.className = 'menu-backdrop';
+    document.body.appendChild(menuBackdrop);
 
-function closeMenu() {
-  nav.classList.remove('active');
-  menuBackdrop.classList.remove('active');
-  document.body.classList.remove('nav-open');
-}
+    function closeMenu() {
+      nav.classList.remove('active');
+      menuBackdrop.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
 
-menuToggle.addEventListener('click', function() {
-  nav.classList.toggle('active');
-  menuBackdrop.classList.toggle('active');
-  document.body.classList.toggle('nav-open');
-});
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      menuBackdrop.classList.toggle('active');
+      document.body.classList.toggle('nav-open');
+    });
 
-menuBackdrop.addEventListener('click', closeMenu);
+    menuBackdrop.addEventListener('click', closeMenu);
 
-// Fecha o menu ao clicar em qualquer link do menu
-document.querySelectorAll('header nav a').forEach(link => {
-  link.addEventListener('click', closeMenu);
+    document.querySelectorAll('header nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        setTimeout(closeMenu, 100);
+      });
+    });
 });
