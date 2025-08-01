@@ -167,3 +167,91 @@ footer a:hover, #contato a:hover {text-decoration: underline;}
   footer, #contato {font-size: 0.95rem; padding: 18px 0 10px 0;}
   .whatsapp-fixed {font-size: 2.1rem; bottom: 14px; right: 14px; padding: 7px 8px 6px 8px;}
 }
+/* --- MENU HAMBURGUER RESPONSIVO --- */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #FFD700;
+    position: absolute;
+    right: 18px;
+    top: 14px;
+    z-index: 1201;
+    cursor: pointer;
+  }
+  header {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 60px;
+    padding-bottom: 0;
+    align-items: center;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 75vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #002147;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.07);
+    z-index: 1200;
+    padding: 36px 24px 24px 24px;
+    gap: 16px;
+    border-radius: 0 16px 16px 0;
+    transition: transform 0.26s cubic-bezier(.19,1,.22,1);
+    transform: translateX(-100%);
+  }
+  nav.active {
+    display: flex;
+    transform: translateX(0);
+  }
+  nav a {
+    width: 100%;
+    display: block;
+    padding: 18px 0 14px 0;
+    text-align: left;
+    font-size: 1.13rem;
+    border-bottom: 1px solid #18306c44;
+    margin-bottom: 2px;
+  }
+  .header-social {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-open {
+    overflow: hidden;
+  }
+}
+
+/* ESCURECE O FUNDO QUANDO O MENU ABRE */
+.menu-backdrop {
+  display: none;
+}
+@media (max-width: 900px) {
+  .menu-backdrop {
+    display: none;
+    position: fixed;
+    z-index: 1199;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.38);
+    transition: opacity 0.23s;
+  }
+  .menu-backdrop.active {
+    display: block;
+  }
+}
