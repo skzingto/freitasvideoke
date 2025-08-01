@@ -10,6 +10,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
         }
     });
 });
+
 let backToTop = document.getElementById("backToTop");
 if (backToTop) {
     window.onscroll = function() {
@@ -22,32 +23,30 @@ if (backToTop) {
     backToTop.addEventListener("click", function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-} // 
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
-  let menuBackdrop = document.createElement('div');
-  menuBackdrop.className = 'menu-backdrop';
-  document.body.appendChild(menuBackdrop);
+}
 
-  function closeMenu() {
-    nav.classList.remove('active');
-    menuBackdrop.classList.remove('active');
-    document.body.classList.remove('nav-open');
-  }
+// MENU HAMBURGUER (sem <script> tags)
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('header nav');
+let menuBackdrop = document.createElement('div');
+menuBackdrop.className = 'menu-backdrop';
+document.body.appendChild(menuBackdrop);
 
-  menuToggle.addEventListener('click', function() {
-    nav.classList.toggle('active');
-    menuBackdrop.classList.toggle('active');
-    document.body.classList.toggle('nav-open');
-  });
+function closeMenu() {
+  nav.classList.remove('active');
+  menuBackdrop.classList.remove('active');
+  document.body.classList.remove('nav-open');
+}
 
-  menuBackdrop.addEventListener('click', closeMenu);
+menuToggle.addEventListener('click', function() {
+  nav.classList.toggle('active');
+  menuBackdrop.classList.toggle('active');
+  document.body.classList.toggle('nav-open');
+});
 
-  // Fecha o menu ao clicar em qualquer link do menu no mobile
-  document.querySelectorAll('header nav a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-</script>
+menuBackdrop.addEventListener('click', closeMenu);
 
-
+// Fecha o menu ao clicar em qualquer link do menu
+document.querySelectorAll('header nav a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
