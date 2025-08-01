@@ -381,34 +381,6 @@
 <script src="js/scripts.js"></script>
 <button id="backToTop" title="Voltar ao topo">&#8679;</button>
 
-  <script>
-  // Seleciona o botão hamburguer, o menu nav e adiciona backdrop
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
-  let menuBackdrop = document.createElement('div');
-  menuBackdrop.className = 'menu-backdrop';
-  document.body.appendChild(menuBackdrop);
-
-  function closeMenu() {
-    nav.classList.remove('active');
-    menuBackdrop.classList.remove('active');
-    document.body.classList.remove('nav-open');
-  }
-
-  menuToggle.addEventListener('click', function() {
-    nav.classList.toggle('active');
-    menuBackdrop.classList.toggle('active');
-    document.body.classList.toggle('nav-open');
-  });
-
-  menuBackdrop.addEventListener('click', closeMenu);
-
-  // Fecha o menu ao clicar em qualquer link do menu
-  document.querySelectorAll('header nav a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-</script>
-
  
 </body>
 </html>
